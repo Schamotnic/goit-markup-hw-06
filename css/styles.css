@@ -13,6 +13,13 @@ li {
   list-style: none;
 }
 
+label,
+input,
+form {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --max-width-site: 1600px;
   --font-weight-regular: 400;
@@ -272,7 +279,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-
+  padding: 40px;
   min-width: 528px;
   min-height: 581px;
   transform: translate3d(-50%, -50%, 0) scale(1) rotate3d(0, 0, 0, 0);
@@ -296,7 +303,7 @@ body {
   display: block;
   margin-left: auto;
   padding: 0;
-  /* margin-left: auto; */
+
   border-radius: 50%;
   color: black;
   transition: color var(--transition-duration) var(--timing-function);
@@ -307,7 +314,7 @@ body {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   cursor: pointer;
-  color: var(--accent);
+  fill: var(--accent);
 }
 
 /* стили логотипа */
@@ -868,4 +875,131 @@ h3 {
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Стилизация модального окна */
+
+.title-to-modal {
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+.lable-to-form {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.input-to-form {
+  width: 100%;
+  padding: 12px 0 12px 42px;
+  margin-top: 4px;
+  font-size: 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: var(--border-radius);
+  transition: border-color var(--transition-duration) var(--timing-function);
+}
+.icon-to-input {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 15px;
+  bottom: 4px;
+  transition: fill var(--transition-duration) var(--timing-function);
+}
+.lable-to-textarea {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.input-to-form:hover + .icon-to-input,
+.input-to-form:focus + .icon-to-input {
+  fill: var(--accent);
+}
+
+.input-to-form:focus,
+.input-to-form:hover {
+  border-color: var(--accent);
+}
+/* стилизация коментария */
+
+.comment {
+  width: 100%;
+  display: block;
+  padding: 12px 16px;
+  margin-top: 4px;
+  border-radius: var(--border-radius);
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border-color var(--transition-duration) var(--timing-function);
+}
+.comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.comment:focus,
+.comment:hover {
+  border-color: var(--accent);
+}
+/* стилизация чек бокса */
+
+.chek-input {
+  appearance: none;
+}
+
+.box-agree {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+}
+.lable-checbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.714;
+}
+.icon-check {
+  margin-right: 8.38px;
+  border-radius: 2px;
+  fill: var(--white-color-text);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  background-origin: border-box;
+  transition: background-color var(--transition-duration) var(--timing-function),
+    border var(--transition-duration) var(--timing-function);
+}
+.chek-input:focus + .icon-check,
+.chek-input:hover + .icon-check {
+  border-color: var(--accent);
+}
+
+.chek-input:checked + .icon-check {
+  background-color: var(--accent);
+}
+
+.link-chek {
+  color: var(--accent);
+}
+
+.btn-chek {
+  border: 0px;
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px 55px 10px 56px;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white-color-text);
+  cursor: pointer;
+  transition: background-color var(--transition-duration) var(--timing-function),
+    box-shadowvar var(--transition-duration) var(--timing-function);
+}
+
+.btn-chek:hover,
+.btn-chek:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
