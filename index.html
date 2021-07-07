@@ -444,6 +444,28 @@
             </li>
           </ul>
         </div>
+
+        <!-- Сстилизация секции подписки в футере с кнопкой -->
+        <div class="box-for-send">
+          <form class="form-to-footer">
+            <label class="send-lable" for="send">Подпишитесь на рассылку</label>
+            <div class="div-to-form">
+              <input
+                class="send-email"
+                type="email"
+                name="email"
+                id="send"
+                placeholder="E-mail"
+              />
+              <button class="send-btn active" type="submit">
+                Подписаться
+                <svg class="icon-send" width="24" height="24">
+                  <use href="./images/sprait.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- Модальное окно -->
@@ -488,24 +510,22 @@
               ></textarea>
             </label>
 
-            <div class="box-agree">
-              <label class="lable-checbox">
-                <input
-                  class="chek-input"
-                  type="checkbox"
-                  name="checkbox"
-                  value="yes"
-                />
-                <svg class="icon-check" width="16" height="15">
-                  <use href="./images/sprait.svg#icon-check"></use>
-                </svg>
-                Соглашаюсь с рассылкой и принимаю
-                <a class="link-chek" href="#" target="_blank">
-                  Условия договора</a
-                >
-              </label>
-              <button class="btn-chek" type="submit">Отправить</button>
-            </div>
+            <label class="lable-checbox">
+              <input
+                class="chek-input"
+                type="checkbox"
+                name="checkbox"
+                value="yes"
+              />
+              <svg class="icon-check" width="16" height="15">
+                <use href="./images/sprait.svg#icon-check"></use>
+              </svg>
+              Соглашаюсь с рассылкой и принимаю &nbsp;
+              <a class="link-chek" href="#" target="_blank">
+                Условия договора</a
+              >
+            </label>
+            <button class="btn-chek" type="submit">Отправить</button>
           </form>
         </div>
       </div>
